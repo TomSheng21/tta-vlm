@@ -1,0 +1,4 @@
+__pycache__/
+online_results/
+output_results/
+*.sh
