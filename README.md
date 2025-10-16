@@ -18,7 +18,7 @@ Replace /path/to/dataset with your dataset folder root in below commands and che
 
 Replace your_cache_path with your cache folder root in some files (`clip/constants.py`, `instance_tta.py`, `online_tta.py`).
 
-###
+### Run:
 
 1. ##### Episodic Test-Time Adaptation on CLIP
 
@@ -36,4 +36,16 @@ Replace your_cache_path with your cache folder root in some files (`clip/constan
 
     The algorithm can be replaced by a series of online methods supported by this benchmark: `clipzs`, `tda`, `dmn_weak`, `dmn`, `onzeta`, `boostadapter`, `dpe`, `ecalp`, `dyanprompt`.
 
+
+### Citation:
+
+If you find our survey and repository useful for your research, please consider citing our paper:
+```bibtex
+@inproceedings{sheng2025illusion,
+  title={The Illusion of Progress? A Critical Look at Test-Time Adaptation for Vision-Language Models},
+  author={Sheng, Lijun and Liang, Jian and He, Ran and Wang, Zilei and Tan, Tieniu},
+  booktitle={Proc. NeurIPS},
+  year={2025}
+}
+```
 
