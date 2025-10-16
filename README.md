@@ -1,7 +1,9 @@
 
 # VLM-TTA: A Benchmark of Test-Time Adaptation for Vision-Language Models
 
-## The Illusion of Progress? A Critical Look at Test-Time Adaptation for Vision-Language Models
+## 
+
+## [**[NeurIPS-2025] The Illusion of Progress? A Critical Look at Test-Time Adaptation for Vision-Language Models**](https://arxiv.org/abs/2506.24000)
 
 ### Framework:  
 <img src="figs/ttavlm.png" width="600"/>
