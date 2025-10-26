@@ -18,10 +18,11 @@ class TPS():
     def __init__(self, model, device):
         self.model = model
         self.device = device
-        self.scaler = torch.cuda.amp.GradScaler(init_scale=1000)
+        
 
     def prepare_model_and_optimization(self, args):
         self.model.eval()
+        self.scaler = torch.cuda.amp.GradScaler(init_scale=1000)
         trainable_param = self.model.shifter.parameters()
         if args.test_sets in ['A', 'R', 'V', 'K', 'I']:
             args.lr = 5e-3

@@ -21,10 +21,11 @@ class TTL():
     def __init__(self, model, device):
         self.model = model
         self.device = device
-        self.scaler = torch.cuda.amp.GradScaler(init_scale=1000)
+        
 
     def prepare_model_and_optimization(self, args):
         self.model.eval()
+        self.scaler = torch.cuda.amp.GradScaler(init_scale=1000)
         trainable_param = self.model.get_lora_params()
         self.optimizer = torch.optim.AdamW(trainable_param, args.lr)
         self.optim_state = deepcopy(self.optimizer.state_dict())

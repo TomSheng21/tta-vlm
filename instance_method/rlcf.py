@@ -157,10 +157,11 @@ class RLCF():
         self.reward_process = 1
         self.process_batch = 0
 
-        self.scaler = torch.cuda.amp.GradScaler(init_scale=1000)
+        
 
     def prepare_model_and_optimization(self, args):
         self.model.eval()
+        self.scaler = torch.cuda.amp.GradScaler(init_scale=1000)
 
         trainable_param = self.model.prompt_learner.parameters()
         self.optimizer = torch.optim.AdamW(trainable_param, lr=7e-3, weight_decay=5e-4)
